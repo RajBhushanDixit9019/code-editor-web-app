@@ -16,7 +16,7 @@ function SignupArea() {
       </div>
 
       <div>
-        <input type="text" placeholder="Codername..." className="input-style" />
+        <input type="text" placeholder="Username..." className="input-style" />
       </div>
 
       <div>

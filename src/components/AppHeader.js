@@ -1,9 +1,11 @@
 function AppHeader() {
     const appheaderstyle = {
+      boxSizing: 'borderBox',
+      position: 'relative',
       color: 'white',
       backgroundColor: 'rgba(36, 37, 37, 1)',
       height: '50px',
-      width: '1500px',
+      width: '100%',
       display: 'flex',
       justifyContent: 'center', // centers horizontally
       alignItems: 'center', // centers vertically
