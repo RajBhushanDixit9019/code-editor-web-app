@@ -1,0 +1,139 @@
+
+  
+  /* Code Editor Page Styling */
+  .codeeditor-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .codeeditor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 80%;
+    
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 12px; /* Rounded corners */
+    box-sizing: border-box;
+  }
+  
+  .codeeditor-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333333; /* Dark gray text */
+  }
+  
+  .codeeditor {
+    width: 100%;
+    height: 100%;
+    padding: auto;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc; /* Light gray border */
+    border-radius: 12px;
+  }
+  
+  .monaco-editor {
+    border: 1px solid #3c3c3c; /* Subtle border around the editor */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .monaco-editor:hover {
+    border-color: #5a5a5a;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+  }
+  
+  .monaco-editor .view-lines {
+    font-family: 'Fira Code', monospace; /* Better font for coding */
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .codeeditor-container {
+      width: 95%;
+      padding: 15px;
+    }
+  }
+  
+  [data-theme='vs-dark'] .codeeditor-container {
+    background-color: #2d2d2d;
+  }
+  
+  [data-theme='light'] .codeeditor-container {
+    background-color: #f5f5f5;
+  }
+  
+  
+  /* Output Component Styles */
+  .output {
+    width: 100%;
+    height: 100%;
+    background-color: var(--code-background);
+    border: 1px solid var(--editor-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+    overflow:hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .output-header {
+    padding: 5px;
+    font-weight: bold;
+    background-color: var(--editor-border);
+    border-bottom: 1px solid var(--editor-border);
+    color: var(--text-color);
+  }
+  
+  .output-content {
+    padding: 10px;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Dark mode styles for Output component */
+  body[data-theme="dark"] .output {
+    background-color: #2d2d2d;
+    color: #dcdcdc;
+    border-color: #444444;
+  }
+  
+  body[data-theme="dark"] .output-header {
+    background-color: #444444;
+    color: #dcdcdc;
+  }
+  
+  body[data-theme="dark"] .output-content {
+    color: #dcdcdc;
+  }
+  
+  /* Light mode styles for Output component */
+  body[data-theme="light"] .output {
+    background-color: #ffffff;
+    color: #333333;
+    border-color: #cccccc;
+  }
+  
+  body[data-theme="light"] .output-header {
+    background-color: #f0f0f0;
+    color: #333333;
+  }
+  
+  body[data-theme="light"] .output-content {
+    color: #333333;
+  }
+  
