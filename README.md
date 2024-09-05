@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# code-editor-web-app
+The "Code Editor Web App" is a browser-based platform for coding in JavaScript. It offers customizable themes, syntax highlighting, real-time output, and features like auto-completion and error detection. Built with ReactJS and Node.js, it’s user-friendly and efficient.
+>>>>>>> origin/master
