@@ -1,12 +1,19 @@
-// Loader.js
 import React from 'react';
-import './Loader.css'; // Make sure to create and import the CSS for the loader
+import './Loader.css'; // Ensure this file contains the updated CSS
 
-const Loader = () => {
+const Loader = ({ playgroundType }) => {
   return (
     <div className="loader-container">
-      <div className="loader"></div>
-      <p>Loading Code Editor...</p>
+      <div className="loader">
+        
+      </div>
+      <p className="loader-message">
+        {playgroundType === 'JavaScript'
+          ? 'Loading JavaScript Playground...'
+          : playgroundType === 'Python'
+          ? 'Loading Python Playground...'
+          : 'Loading...'}
+      </p>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Editor } from "@monaco-editor/react";
-import "./CodeEditor.css";
+import "./CommonEditor.css";
 import Output from "./Output.js";
 import ThemeDropdown from "./ThemeDropdown";
 
@@ -8,7 +8,7 @@ const CodeEditor = () => {
   const [code, setCode] = useState("console.log('Hello, world!');");
   const [output, setOutput] = useState("your output...");
   const [theme, setTheme] = useState("vs-dark");
-  const [loading, setLoading] = useState(false); // Loader state
+  const [loading, setLoading] = useState(false); // initial Loader state
 
   const handleEditorChange = (value) => {
     setCode(value);

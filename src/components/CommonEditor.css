@@ -1,0 +1,128 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.theme-dropdown {
+  margin-right: 20px;
+  width: 200px;
+}
+
+.run-button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.run-button:hover {
+  background-color: #005a9e;
+}
+
+.run-button .fa {
+  margin-right: 8px;
+}
+
+/* Editor and output layout */
+.Editor-Output {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Full height minus the top bar */
+  overflow: hidden;
+}
+
+.Editor {
+  flex: 3;
+  background-color: #ffffff;
+}
+
+.Output {
+  flex: 1;
+  color: #333;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  font-family: monospace;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* Monaco Editor specific styles */
+.monaco-editor {
+  border: none !important;
+  box-shadow: none !important;
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* Loader container */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  position: fixed; /* Fixed position to cover the screen */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* Loader spinner */
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.1); /* Light background color */
+  border-radius: 50%;
+  border-top: 8px solid #007acc; /* Main color for spinner */
+  width: 60px; /* Size of the spinner */
+  height: 60px; /* Size of the spinner */
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loader message */
+.loader-message {
+  margin-top: 20px;
+  color: #d4d4d4;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Python-specific styles */
+.python-editor {
+  background-color: #f4f4f4;
+}
+
+/* JavaScript-specific styles */
+.js-editor {
+  background-color: #e0e0e0;
+}

@@ -5,7 +5,7 @@ function Output({ output }) {
   return (
     <div className="output">
       <div className="output-header">
-        Output
+        <h2>Output</h2>
       </div>
       <div className="output-content">
         <pre>{output}</pre>
