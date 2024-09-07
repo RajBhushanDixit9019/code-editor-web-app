@@ -39,7 +39,7 @@ const CodeEditor = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <h1
         style={{
           textAlign: "center",

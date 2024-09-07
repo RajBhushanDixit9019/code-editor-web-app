@@ -26,7 +26,7 @@ const PythonPlayground = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <h1 style={{ textAlign: "center" }}>Python Playground</h1>
       <div className="top">
         <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} className="theme-dropdown" />

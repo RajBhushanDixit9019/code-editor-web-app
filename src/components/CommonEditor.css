@@ -1,33 +1,105 @@
-/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* Global Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: 'JetBrains Mono', monospace;
+  background: linear-gradient(135deg, #f58529, #feda75, #dd2a7b, #8134af, #515bd4);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #dcdcdc; /* Light text color */
 }
 
+/* Flex Container for Editor and Output */
+.Editor-Output {
+  display: flex;
+  height: calc(95vh - 70px); /* Full height minus the top bar */
+  overflow: auto;
+}
+
+/* Editor and Output Styles */
+.Editor, .Output {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #dcdcdc; /* Light text color */
+  padding: 10px;
+  max-height: 100%;
+}
+
+.Editor {
+  flex: 2.8;
+  border-right: 1px solid #444;
+  overflow: auto;
+}
+
+.Output {
+  flex: 1.2;
+  border-left: 1px solid #444;
+  overflow-y: auto;
+}
+
+/* Header and Content Styles */
+h1 {
+  color: #ffffff;
+}
+
+.output-header {
+  padding: 5px;
+  font-weight: bold;
+  color: #ffcc00; /* Bright yellow for accent */
+}
+
+.output-content {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #abb2bf; /* Slightly lighter text color */
+}
+
+/* Monaco Editor Specific Styles */
+.monaco-editor {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #abb2bf;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Top Bar Styling */
 .top {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Theme Dropdown */
 .theme-dropdown {
   margin-right: 20px;
   width: 200px;
+  background-color: #282c34;
+  color: #abb2bf;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
+/* Run Button */
 .run-button {
   background-color: #007acc;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
   margin-left: 10px;
@@ -35,94 +107,19 @@ body {
 
 .run-button:hover {
   background-color: #005a9e;
+  transform: translateY(-2px);
 }
 
 .run-button .fa {
   margin-right: 8px;
 }
 
-/* Editor and output layout */
-.Editor-Output {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 60px); /* Full height minus the top bar */
-  overflow: hidden;
-}
-
-.Editor {
-  flex: 3;
-  background-color: #ffffff;
-}
-
-.Output {
-  flex: 1;
-  color: #333;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  font-family: monospace;
-  overflow-y: auto;
-  white-space: pre-wrap;
-}
-
-/* Monaco Editor specific styles */
-.monaco-editor {
-  border: none !important;
-  box-shadow: none !important;
-  font-family: "Fira Code", "Consolas", "Courier New", monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
-  background-color: #ffffff;
-}
-
-/* Loader container */
-.loader-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  position: fixed; /* Fixed position to cover the screen */
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensure it's on top of other content */
-}
-
-/* Loader spinner */
-.loader {
-  border: 8px solid rgba(255, 255, 255, 0.1); /* Light background color */
-  border-radius: 50%;
-  border-top: 8px solid #007acc; /* Main color for spinner */
-  width: 60px; /* Size of the spinner */
-  height: 60px; /* Size of the spinner */
-  animation: spin 0.5s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-position: 0% 0%;
   }
-  100% {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 100%;
   }
-}
-
-/* Loader message */
-.loader-message {
-  margin-top: 20px;
-  color: #d4d4d4;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* Python-specific styles */
-.python-editor {
-  background-color: #f4f4f4;
-}
-
-/* JavaScript-specific styles */
-.js-editor {
-  background-color: #e0e0e0;
 }

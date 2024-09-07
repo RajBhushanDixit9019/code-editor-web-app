@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css'; // Ensure this path is correct
+import './CommonEditor.css'; // Ensure this path is correct
 
 function Output({ output }) {
   return (
